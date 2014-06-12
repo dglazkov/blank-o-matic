@@ -11,10 +11,18 @@ handlers:
   upload: index.html
   static_files: index.html
 
+- url: /files
+  static_dir: files
+
+- url: /components
+  static_dir: components
+
 skip_files:
 - ^(.*/)?#.*#
 - ^(.*/)?.*~
 - ^(.*/)?.*\.py[co]
+- ^(.*/)?.*\.md$
+- ^(.*/)?.*\.log$
 - ^(.*/)?app\.yaml
 # ignore crufty bits in checkouts
 - ^(.*/)?node_modules/.*
